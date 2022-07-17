@@ -1,15 +1,15 @@
 resource "aws_iam_policy" "policy_for_master_role" {
-  name        = "policy_for_master_role"
+  name        = "policy_for_master_role_1"
   policy      = file("./modules/IAM/policy_for_master.json")
 }
 
 resource "aws_iam_policy" "policy_for_worker_role" {
-  name        = "policy_for_worker_role"
+  name        = "policy_for_worker_role_1"
   policy      = file("./modules/IAM/policy_for_worker.json")
 }
 
 resource "aws_iam_role" "role_for_master" {
-  name = "role_master_k8s"
+  name = "role_master_k8s_1"
 
   # Terraform "jsonencode" function converts a
   # Terraform expression result to valid JSON syntax.
@@ -33,7 +33,7 @@ resource "aws_iam_role" "role_for_master" {
 }
 
 resource "aws_iam_role" "role_for_worker" {
-  name = "role_worker_k8s"
+  name = "role_worker_k8s_1"
 
   # Terraform "jsonencode" function converts a
   # Terraform expression result to valid JSON syntax.
